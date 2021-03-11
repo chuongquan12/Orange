@@ -11,4 +11,3 @@
 	} else  {
 		echo "Kết nối của bạn thất bại".mysqli_connect_error();
 	}
-?>
