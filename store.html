@@ -101,98 +101,176 @@
           </div>
         </div>
       </header>
+      <hr>
+      <div class="">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"><a href="{{ URL :: to('home')}}"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="">GIỎ HÀNG</a></li>
+            </ol>
+        </nav>  
+    </div>
+    <br>
+      <div class="container-fluid filer">
+        <div class="row align-items-center">
+          <span class="filter-title">BỘ LỌC SẢN PHẨM</span>
+          <span class="filer-icon"><i class="fas fa-filter"></i></span> 
+        </div>
+        <div class="row align-items-center m-3">
+          <span class="filter-title__item">GIÁ</span>
+          <label for="price_1" class="filter-label-price">0 - 10$</label><input type="radio" name="price" id="price_1" hidden>
+          <label for="price_2" class="filter-label-price">10$ - 20$</label><input type="radio" name="price" id="price_2" hidden>
+          <label for="price_3" class="filter-label-price">20$ - 50$</label><input type="radio" name="price" id="price_3" hidden>
+          <label for="price_4" class="filter-label-price">Trên 50$</label><input type="radio" name="price" id="price_4" hidden>
+        </div>
+        <div class="row align-items-center m-3">
+          <span class="filter-title__item">XUẤT XỨ</span>
+        </div>
+      </div>
       <br />
-      <div class="container-fluid">
-        <div class="row slide_banner">
-          <div class="col-md-7 slide_banner--img">
-            <a href="">
-              <img src="/img/background/fruit-juice-1.jpg" alt="Slide banner" />
+      <div class="container-fluid list-product">
+        <div class="row align-items-center m-3">
+          <span class="filter-title__item ">SẮP XẾP THEO</span>
+          <label for="sort_1" class="filter-label-sort">Khuyến mãi</label><input type="radio" name="sort" id="sort_1" hidden>
+          <label for="sort_2" class="filter-label-sort">Bán chạy</label><input type="radio" name="sort" id="sort_2" hidden>
+          <label for="sort_4" class="filter-label-sort">Sản phẩm mới</label><input type="radio" name="sort" id="sort_4" hidden>
+          <label for="sort_3" class="filter-label-sort">Giá tăng dần</label><input type="radio" name="sort" id="sort_3" hidden>
+          <label for="sort_4" class="filter-label-sort">Giá giảm dần</label><input type="radio" name="sort" id="sort_4" hidden>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="card-product">
+            <a class="row justify-content-center" href="">
+              <img
+                src="/img/product/cam-chua-nhieu-vitamin-c-tot-cho-nguoi-tai-bien.jpg"
+                class="card-product__img"
+                alt="..."
+              />
             </a>
-          </div>
-          <div class="col-md-5 slide_banner--content">
-            <h5 class="slide_banner--content__title">
-              ĐA DẠNG LOẠI TRÁI CÂY NHẬP KHẨU
-            </h5>
-            <br />
-            <p class="slide_banner--content__description">
-              Chuyên cung cấp các loại trái cây nhập khẩu với nguồn trái cây tốt
-              nhất, an toàn cho sức khỏe, đảm bảo tiêu chuẩn chất lượng một cách
-              nghiêm ngặt
-            </p>
-            <div class="row justify-content-end">
-              <a class="col-md-4 col-5 slide_banner--content__btn mr-3" href=""
-                >Chi tiết <i class="fas fa-arrow-right"></i
-              ></a>
+            <div class="card-product-body">
+              <div class="row">
+                <div class="col-9 card-product-body__content">
+                  <div class="row">
+                    <a class="card-product-body__content--title" href="index.html?get=1"
+                      >Cam NewZealandsdnmbfsf shdfas sjhgf ashfjgjsha
+                    </a>
+                  </div>
+                  <div class="row">
+                    <span class="card-product-body__content--description">
+                      Xuất xứ:&nbsp;<a href="">NewZealand</a>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="col-3 align-self-end card-product-body__content-icon"
+                >
+                  <span class="card-product-body__content--price">20 $</span>
+                  <a class="card-product-body--buy__cart"
+                    ><i class="fas fa-cart-plus"></i
+                  ></a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3 service-content">
-            <div class="row">
-              <i class="fas fa-trophy service-content__icon"></i>
-            </div>
-            <div class="row">
-              <h5 class="service-content__title">ĐẢM BẢO CHẤT LƯỢNG</h5>
-            </div>
-            <div class="row">
-              <span class="service-content__desciption"
-                >Kiểm định nghiêm ngặt trước khi đến tay người tiêu dùng.
-              </span>
-            </div>
-          </div>
-          <div class="col-md-3 service-content">
-            <div class="row">
-              <i class="fas fa-money-check-alt service-content__icon"></i>
-            </div>
-            <div class="row">
-              <h5 class="service-content__title">HOÀN TIỀN 100%</h5>
-            </div>
-            <div class="row">
-              <span class="service-content__desciption"
-                >Quý khách sẽ được hoàn tiền 100% khi sản phẩm kém chất lượng.
-              </span>
-            </div>
-          </div>
-          <div class="col-md-3 service-content">
-            <div class="row">
-              <i class="fas fa-headphones-alt service-content__icon"></i>
-            </div>
-            <div class="row">
-              <h5 class="service-content__title">HỖ TRỢ 24/7</h5>
-            </div>
-            <div class="row">
-              <span class="service-content__desciption"
-                >Hoạt động tất cả các ngày trong tuần, lễ, tết.
-              </span>
+          <div class="card-product">
+            <a class="row justify-content-center" href="">
+              <img
+                src="/img/product/cam-chua-nhieu-vitamin-c-tot-cho-nguoi-tai-bien.jpg"
+                class="card-product__img"
+                alt="..."
+              />
+            </a>
+            <div class="card-product-body">
+              <div class="row">
+                <div class="col-9 card-product-body__content">
+                  <div class="row">
+                    <a class="card-product-body__content--title" href=""
+                      >Cam NewZealandsdnmbfsf shdfas sjhgf ashfjgjsha
+                    </a>
+                  </div>
+                  <div class="row">
+                    <span class="card-product-body__content--description">
+                      Xuất xứ:&nbsp;<a href="">NewZealand</a>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="col-3 align-self-end card-product-body__content-icon"
+                >
+                  <span class="card-product-body__content--price">20 $</span>
+                  <a class="card-product-body--buy__cart"
+                    ><i class="fas fa-cart-plus"></i
+                  ></a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-3 service-content">
-            <div class="row">
-              <i class="fas fa-shipping-fast service-content__icon"></i>
-            </div>
-            <div class="row">
-              <h5 class="service-content__title">FREE SHIP</h5>
-            </div>
-            <div class="row">
-              <span class="service-content__desciption"
-                >Đơn hàng dưới 2km đều được vận chuyển miễn phí.
-              </span>
+          <div class="card-product">
+            <a class="row justify-content-center" href="">
+              <img
+                src="/img/product/cam-chua-nhieu-vitamin-c-tot-cho-nguoi-tai-bien.jpg"
+                class="card-product__img"
+                alt="..."
+              />
+            </a>
+            <div class="card-product-body">
+              <div class="row">
+                <div class="col-9 card-product-body__content">
+                  <div class="row">
+                    <a class="card-product-body__content--title" href=""
+                      >Cam NewZealandsdnmbfsf shdfas sjhgf ashfjgjsha
+                    </a>
+                  </div>
+                  <div class="row">
+                    <span class="card-product-body__content--description">
+                      Xuất xứ:&nbsp;<a href="">NewZealand</a>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="col-3 align-self-end card-product-body__content-icon"
+                >
+                  <span class="card-product-body__content--price">20 $</span>
+                  <a class="card-product-body--buy__cart"
+                    ><i class="fas fa-cart-plus"></i
+                  ></a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div class="container-fluid">
-        <div class="row list-cart-header">
-          <span>SẢN PHẨM NỔI BẬT</span>
-        </div>
-        <br />
-        <div class="row">
+          <div class="card-product">
+            <a class="row justify-content-center" href="">
+              <img
+                src="/img/product/cam-chua-nhieu-vitamin-c-tot-cho-nguoi-tai-bien.jpg"
+                class="card-product__img"
+                alt="..."
+              />
+            </a>
+            <div class="card-product-body">
+              <div class="row">
+                <div class="col-9 card-product-body__content">
+                  <div class="row">
+                    <a class="card-product-body__content--title" href=""
+                      >Cam NewZealandsdnmbfsf shdfas sjhgf ashfjgjsha
+                    </a>
+                  </div>
+                  <div class="row">
+                    <span class="card-product-body__content--description">
+                      Xuất xứ:&nbsp;<a href="">NewZealand</a>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="col-3 align-self-end card-product-body__content-icon"
+                >
+                  <span class="card-product-body__content--price">20 $</span>
+                  <a class="card-product-body--buy__cart"
+                    ><i class="fas fa-cart-plus"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div> 
           <div class="card-product">
             <a class="row justify-content-center" href="">
               <img
@@ -327,6 +405,8 @@
           </div>
         </div>
       </div>
+      <br />
+      <br />
       <div class="product-overlay"></div>
       <div class="product-detail">
         <div class="row justify-content-end">

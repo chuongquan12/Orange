@@ -45,8 +45,8 @@
             <div class="row">
               <a href="" class="col-md-3 col-6 header__nav--item">TRANG CHỦ</a>
               <a href="" class="col-md-3 col-6 header__nav--item">CỬA HÀNG</a>
-              <a href="" class="col-md-3 col-6 header__nav--item">ĐĂNG NHẬP</a>
-              <a href="" class="col-md-3 col-6 header__nav--item">ĐĂNG KÝ</a>
+              <a href="" class="col-md-3 col-6 header__nav--item btn-login">ĐĂNG NHẬP</a>
+              <a href="" class="col-md-3 col-6 header__nav--item btn-register">ĐĂNG KÝ</a>
             </div>
           </div>
         </div>
@@ -101,7 +101,16 @@
           </div>
         </div>
       </header>
-      <br />
+      <hr>
+      <div class="">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"><a href="{{ URL :: to('home')}}"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="">GIỎ HÀNG</a></li>
+            </ol>
+        </nav>  
+    </div>
+    
       <div class="container-fluid">
         <div class="row slide_banner">
           <div class="col-md-7 slide_banner--img">
@@ -367,6 +376,66 @@
         </div>
         <div class="row justify-content-center">
           <a href="" class="product-detail__add-to-card">CHỌN MUA</a>
+        </div>
+      </div>
+      <div class="log-overlay"></div>
+      <div class="login-detail">
+        <div class="row justify-content-end">
+          <i class="fas fa-times log-res__icon-close"></i>
+        </div>
+        <div class="row justify-content-center">
+         <span class="log-res-title">Đăng nhập</span>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          <input class="form-input" type="text" name="username" id="username" placeholder="Tên đăng nhập"/>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          
+          <input class="form-input" type="password" name="password" id="password" placeholder="Mật khẩu"/>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-7">
+            <span class="log-res-description-1"> Bạn chưa có tài khoản?</span><span class="log-res-description-2 btn-register"> Đăng ký</span>
+          </div>
+          <div class="col-5">
+          <span class="log-res-submit">ĐĂNG NHẬP</span>
+          </div>
+        </div>
+      </div>
+      <div class="res-overlay"></div>
+      <div class="register-detail">
+        <div class="row justify-content-end">
+          <i class="fas fa-times log-res__icon-close"></i>
+        </div>
+        <div class="row justify-content-center">
+         <span class="log-res-title">Đăng ký</span>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          <input class="form-input" type="text" name="name" id="name" placeholder="Họ và tên"/>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          <input class="form-input" type="text" name="address" id="address" placeholder="Địa chỉ"/>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          <input class="form-input" type="text" name="n_phone" id="n_phone" placeholder="Số điện thoại"/>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          <input class="form-input" type="text" name="username" id="username" placeholder="Tên đăng nhập"/>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          <input class="form-input" type="password" name="password" id="password" placeholder="Mật khẩu"/>
+        </div>
+        <div class="row cart-detail__form justify-content-center">
+          
+          <input class="form-input" type="password" name="re_password" id="re_password" placeholder="Xác nhận mật khẩu"/>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-7">
+            <span class="log-res-description-1">Bạn đã có tài khoản?</span><span class="log-res-description-2 btn-login"> Đăng nhập</span>
+          </div>
+          <div class="col-5">
+          <span class="log-res-submit">ĐĂNG KÝ</span>
+          </div>
         </div>
       </div>
     </div>
