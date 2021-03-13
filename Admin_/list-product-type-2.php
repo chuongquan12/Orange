@@ -81,6 +81,7 @@ $result_list_product_type_2 = mysqli_query($conn, $sql_list_product_type_2);
                                 <input type="checkbox" id="delete" hidden class="log-re__input" />
                                 <label class="log-re__overlay" for="delete"></label>
                                 <div class="register" id="form-delete">
+                                    
                                 </div>
                             </span>
                         </td>
