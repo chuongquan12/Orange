@@ -24,8 +24,23 @@ hr {
 
 input[type="text"]:focus,
 input[type="submit"],
-input[type="password"]:focus {
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
   outline: none;
+}
+
+textarea {
+  width: 100%;
+  font-size: 0.9rem !important;
+  color: var(--color-2);
+  border: 1px solid var(--color-2);
+  border-radius: 10px;
+}
+
+option {
+  background: none;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -96,8 +111,9 @@ input[type="password"]:focus {
 }
 
 .form-lable {
-  margin: 0 0.2rem !important;
+  margin-left: -4.5rem;
   padding: 0 1rem;
+  font-size: 0.9rem;
   color: var(--color-2);
 }
 
@@ -171,7 +187,6 @@ input[type="password"]:focus {
 .content {
   margin: 0.5rem !important;
   padding: 0.5rem;
-  height: 31rem;
   border: 1px solid var(--color-2);
   border-radius: 10px;
 }

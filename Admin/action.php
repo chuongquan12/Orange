@@ -4,38 +4,38 @@ session_start();
 
 // // Edit Personnel
 
-// if (isset($_GET['sub_personnel_edit']) && isset($_GET['msnv'])) {
-//     $msnv = $_GET['msnv'];
-//     $name = $_GET['name'];
-//     $n_phone = $_GET['n_phone'];
-//     $address = $_GET['address'];
-//     $position = $_GET['position'];
+if (isset($_GET['sub_edit_personnel']) && isset($_GET['MSNV'])) {
+    $MSNV = $_GET['MSNV'];
+    $name = $_GET['name'];
+    $n_phone = $_GET['n_phone'];
+    $address = $_GET['address'];
+    $position = $_GET['position'];
 
-//     $sql_list_personnel_edit = "UPDATE `tb_nhanvien` SET `HoTenNV` = '$name', `ChucVu` = '$position', `DiaChi` = '$address', `SoDienThoai` = '$n_phone' WHERE `tb_nhanvien`.`MSNV` = '$msnv'";
-//     mysqli_query($conn, $sql_list_personnel_edit);
-// }
+    $sql_edit = "UPDATE `tb_nhanvien` SET `HoTenNV` = '$name', `ChucVu` = '$position', `DiaChi` = '$address', `SoDienThoai` = '$n_phone' WHERE `tb_nhanvien`.`MSNV` = '$MSNV'";
+    mysqli_query($conn, $sql_edit);
+}
 
 // // Add Personnel
 
-// if (isset($_GET['sub_personnel_add'])) {
-//     $name = $_GET['name'];
-//     $n_phone = $_GET['n_phone'];
-//     $address = $_GET['address'];
-//     $position = $_GET['position'];
-//     $username = $_GET['username'];
-//     $password = $_GET['password'];
+if (isset($_GET['sub_add_personnel'])) {
+    $name = $_GET['name'];
+    $n_phone = $_GET['n_phone'];
+    $address = $_GET['address'];
+    $position = $_GET['position'];
+    $username = $_GET['username'];
+    $password = $_GET['password'];
 
-//     $sql_list_personnel_add = "INSERT INTO `tb_nhanvien` (`HoTenNV`, `ChucVu`, `DiaChi`, `SoDienThoai`, `Username`, `Password`) VALUES ('$name', '$position', '$address', '$n_phone', '$username', '$password')";
-//     mysqli_query($conn, $sql_list_personnel_add);
-// }
+    $sql_add = "INSERT INTO `tb_nhanvien` (`HoTenNV`, `ChucVu`, `DiaChi`, `SoDienThoai`, `Username`, `Password`) VALUES ('$name', '$position', '$address', '$n_phone', '$username', '$password')";
+    mysqli_query($conn, $sql_add);
+}
 
 // // Delete Personnel
-// if (isset($_GET['sub_personnel_delete']) && isset($_GET['msnv'])) {
-//     $msnv = $_GET['msnv'];
+if (isset($_GET['sub_del_personnel']) && isset($_GET['MSNV'])) {
+    $MSNV = $_GET['MSNV'];
 
-//     $sql_list_personnel_delete = "DELETE FROM `tb_nhanvien` WHERE `tb_nhanvien`.`MSNV` = '$msnv'";
-//     mysqli_query($conn, $sql_list_personnel_delete);
-// }
+    $sql_delete = "DELETE FROM `tb_nhanvien` WHERE `tb_nhanvien`.`MSNV` = '$MSNV'";
+    mysqli_query($conn, $sql_delete);
+}
 
 // // Edit Product Type_1
 

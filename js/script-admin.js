@@ -19,4 +19,18 @@ $(document).ready(function(){
         $(".form-layout").show();        
     });
 
+    $("#personnel").click(function (e) { 
+        $("#content").load("personnel.php");
+    });
+
+    $(".edit-personnel").click(function (e) { 
+        $("#form").show(750);        
+        $(".form-layout").show();        
+    });
+
+    $("#add-personnel").click(function (e) { 
+        $("#form").show(750);        
+        $(".form-layout").show();        
+    });
+
 });
