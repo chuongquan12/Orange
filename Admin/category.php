@@ -152,6 +152,7 @@ if (isset($_POST['edit_category']) && isset($_POST['id'])) {
                 <tr>
                     <th scope="col">MÃ XUẤT XỨ</th>
                     <th scope="col">NƠI XUẤT XỨ</th>
+                    <th scope="col">NGÀY CẬP NHẬT</th>
                     <th scope="col">TÙY CHỌN</th>
                 </tr>
             </thead>
@@ -160,6 +161,7 @@ if (isset($_POST['edit_category']) && isset($_POST['id'])) {
                     <tr>
                         <td><?php echo $key['MaNhom'] ?></td>
                         <td><?php echo $key['TenNhom'] ?></td>
+                        <td><?php echo $key['NgayCapNhat'] ?></td>
                         <td id="tb-list-product-type-2__icon">
                             <span class="edit-category" MaNhom="<?php echo $key['MaNhom'] ?>">
                                 <i class="fas fa-edit icon-tb"></i>

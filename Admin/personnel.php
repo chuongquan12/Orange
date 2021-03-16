@@ -57,7 +57,7 @@ if (isset($_POST['edit_personnel']) && isset($_POST['id'])) {
                 <input class="form-input" type="text" name="n_phone" id="n_phone" placeholder="Số điện thoại" value="<?php echo $data['SoDienThoai'] ?>" />
             </div>
             <div class="row form-item justify-content-between">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="position" class="form-lable">Chức vụ</label>
                 </div>
                 <div class="col-6">
@@ -129,7 +129,7 @@ if (isset($_POST['edit_personnel']) && isset($_POST['id'])) {
                 <input class="form-input" type="text" name="n_phone" id="n_phone" placeholder="Số điện thoại" value="" />
             </div>
             <div class="row form-item justify-content-between">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="position" class="form-lable">Chức vụ</label>
                 </div>
                 <div class="col-6">
@@ -197,9 +197,7 @@ if (isset($_POST['edit_personnel']) && isset($_POST['id'])) {
                         MSNV: MSNV,
                         sub_del_personnel: true
                     },
-                    function(data) {
-                        alert("Xóa nhân viên thành công")
-                    }
+                    function(data) {}
                 );
                 $("#content").load("personnel.php");
 
@@ -251,6 +249,3 @@ if (isset($_POST['edit_personnel']) && isset($_POST['id'])) {
     <div id="form">
     </div>
 <?php } ?>
-
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/script-admin.js"></script>

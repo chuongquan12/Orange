@@ -2,6 +2,26 @@
 include "connect.php";
 session_start();
 
+// Order
+// // Accept Order
+
+if (isset($_GET['sub_accept_order']) && isset($_GET['SoDonDH'])) {
+    $SoDonDH = $_GET['SoDonDH'];
+
+    $sql_accept = "UPDATE `tb_dathang` SET `TrangThai` = 'Hoàn thành' WHERE `tb_dathang`.`SoDonDH` = '$SoDonDH'";
+    mysqli_query($conn, $sql_accept);
+}
+
+// // Cancel Order
+
+if (isset($_GET['sub_cancel_order']) && isset($_GET['SoDonDH'])) {
+    $SoDonDH = $_GET['SoDonDH'];
+
+    $sql_cancel = "UPDATE `tb_dathang` SET `TrangThai` = 'Hủy đơn' WHERE `tb_dathang`.`SoDonDH` = '$SoDonDH'";
+    mysqli_query($conn, $sql_cancel);
+}
+
+// Personnel
 // // Edit Personnel
 
 if (isset($_GET['sub_edit_personnel']) && isset($_GET['MSNV'])) {
@@ -37,32 +57,6 @@ if (isset($_GET['sub_del_personnel']) && isset($_GET['MSNV'])) {
     mysqli_query($conn, $sql_delete);
 }
 
-// // Edit Product Type_1
-
-// if (isset($_GET['sub_product_type_1_edit']) && isset($_GET['MaTC'])) {
-//     $name = $_GET['name'];
-//     $MaTC = $_GET['MaTC'];
-
-//     $sql_list_product_type_1_edit = "UPDATE `tb_thucung` SET `TenThuCung` = '$name', `NgayCapNhat` = CURRENT_DATE() WHERE `tb_thucung`.`MaTC` = '$MaTC'";
-//     mysqli_query($conn, $sql_list_product_type_1_edit);
-// }
-
-// // Add Product Type_1
-
-// if (isset($_GET['sub_product_type_1_add'])) {
-//     $name = $_GET['name'];
-
-//     $sql_list_product_type_1_add = "INSERT INTO `tb_thucung` (`TenThuCung`, `NgayCapNhat`) VALUES ('$name', CURRENT_DATE())";
-//     mysqli_query($conn, $sql_list_product_type_1_add);
-// }
-
-// // Delete Product Type_1
-// if (isset($_GET['sub_product_type_1_delete']) && isset($_GET['MaTC'])) {
-//     $MaTC = $_GET['MaTC'];
-
-//     $sql_list_product_type_1_delete = "DELETE FROM `tb_thucung` WHERE `tb_thucung`.`MaTC` = '$MaTC'";
-//     mysqli_query($conn, $sql_list_product_type_1_delete);
-// }
 
 // Category
 // // Edit Category
@@ -92,83 +86,57 @@ if (isset($_GET['sub_del_category']) && isset($_GET['MaNhom'])) {
     mysqli_query($conn, $sql_delete);
 }
 
-// // Edit Trademark
-
-// if (isset($_GET['sub_trademark_edit']) && isset($_GET['math'])) {
-//     $name = $_GET['name'];
-//     $MaTH = $_GET['math'];
-
-//     $sql_list_trademark_edit = "UPDATE `tb_thuoghieu` SET `TenThuongHieu` = '$name', `NgayCapNhat` = CURRENT_DATE() WHERE `tb_thuonghieu`.`MaTH` = '$MaTH'";
-//     mysqli_query($conn, $sql_list_trademark_edit);
-// }
-
-// // Add Trademark
-
-// if (isset($_GET['sub_trademark_add'])) {
-//     $name = $_GET['name'];
-
-//     $sql_list_trademark_add = "INSERT INTO `tb_thuonghieu` (`MaTH`, `TenThuongHieu`, `NgayCapNhat`) VALUES (NULL, '$name', CURRENT_DATE())";
-//     mysqli_query($conn, $sql_list_trademark_add);
-// }
-
-// // Delete Trademark
-// if (isset($_GET['sub_trademark_delete']) && isset($_GET['math'])) {
-//     $MaTH = $_GET['math'];
-
-//     $sql_list_trademark_delete = "DELETE FROM `tb_thuonghieu` WHERE `tb_thuonghieu`.`MaTH` = '$MaTH'";
-//     mysqli_query($conn, $sql_list_trademark_delete);
-// }
-
+// Product
 // // Edit Product
 
-// if (isset($_GET['sub_product_edit']) && isset($_GET['mahh'])) {
-//     $name = $_GET['name'];
-//     $mahh = $_GET['mahh'];
-//     $description = $_GET['description'];
-//     $manhom = $_GET['manhom'];
-//     $math = $_GET['math'];
-//     $amount = $_GET['amount'];
-//     $image = $_GET['image'];
-//     $price = $_GET['price'];
-//     $discount = $_GET['discount'];
+if (isset($_GET['sub_product_edit']) && isset($_GET['mahh'])) {
+    $name = $_GET['name'];
+    $mahh = $_GET['mahh'];
+    $description = $_GET['description'];
+    $manhom = $_GET['manhom'];
+    $math = $_GET['math'];
+    $amount = $_GET['amount'];
+    $image = $_GET['image'];
+    $price = $_GET['price'];
+    $discount = $_GET['discount'];
 
-//     $sql_list_product_edit = "UPDATE `tb_hanghoa` 
-//         SET 
-//             `TenHH` = '$name', 
-//             `Gia` = '$price', 
-//             `SoLuongHang` = '$amount', 
-//             `MaNhom` = '$manhom', 
-//             `MaTH` = '$math', 
-//             `Hinh` = '$image', 
-//             `MoTaHH` = '$description', 
-//             `KhuyenMai` = '$discount', 
-//             `NgayCN` = CURRENT_DATE() 
-//         WHERE `tb_hanghoa`.`MSHH` = '$mahh'";
-//     mysqli_query($conn, $sql_list_product_edit);
-// }
+    $sql_list_product_edit = "UPDATE `tb_hanghoa` 
+        SET 
+            `TenHH` = '$name', 
+            `Gia` = '$price', 
+            `SoLuongHang` = '$amount', 
+            `MaNhom` = '$manhom', 
+            `MaTH` = '$math', 
+            `Hinh` = '$image', 
+            `MoTaHH` = '$description', 
+            `KhuyenMai` = '$discount', 
+            `NgayCN` = CURRENT_DATE() 
+        WHERE `tb_hanghoa`.`MSHH` = '$mahh'";
+    mysqli_query($conn, $sql_list_product_edit);
+}
 
 // // Add Product
 
-// if (isset($_GET['sub_product_add'])) {
-//     $name = $_GET['name'];
-//     $description = $_GET['description'];
-//     $manhom = $_GET['manhom'];
-//     $math = $_GET['math'];
-//     $amount = $_GET['amount'];
-//     $image = $_GET['image'];
-//     $price = $_GET['price'];
-//     $discount = $_GET['discount'];
+
+if (isset($_GET['sub_add_product'])) {
+    $name = $_GET['name'];
+    $description = $_GET['description'];
+    $category = $_GET['category'];
+    $quantity = $_GET['quantity'];
+    $file = $_GET['file'];
+    $price = $_GET['price'];
+    $discount = $_GET['discount'];
 
 
-//     $sql_list_product_add = "INSERT INTO `tb_hanghoa` (`MSHH`, `TenHH`, `Gia`, `SoLuongHang`, `MaNhom`, `MaTH`, `Hinh`, `MoTaHH`, `NgayCN`, `KhuyenMai`) 
-//     VALUES (NULL, '$name', '$price', '$amount', '$manhom', '$math', '$image', '$description', CURRENT_DATE(), '$discount')";
-//     mysqli_query($conn, $sql_list_product_add);
-// }
+    $sql_list_product_add = "INSERT INTO `tb_hanghoa` (`MSHH`, `TenHH`, `Gia`, `SoLuongHang`, `MaNhom`, `Hinh`, `MoTaHH`, `NgayCN`, `KhuyenMai`) 
+    VALUES (NULL, '$name', '$price', '$quantity', '$category', '$file', '$description', CURRENT_DATE(), '$discount')";
+    mysqli_query($conn, $sql_list_product_add);
+}
 
 // // Delete Product
-// if (isset($_GET['sub_product_delete']) && isset($_GET['mahh'])) {
-//     $MSHH = $_GET['mahh'];
+if (isset($_GET['sub_del_product']) && isset($_GET['MSHH'])) {
+    $MSHH = $_GET['MSHH'];
 
-//     $sql_list_product_delete = "DELETE FROM `tb_hanghoa` WHERE `tb_hanghoa`.`MSHH` = '$MSHH'";
-//     mysqli_query($conn, $sql_list_product_delete);
-// }
+    $sql_list_product_delete = "DELETE FROM `tb_hanghoa` WHERE `tb_hanghoa`.`MSHH` = '$MSHH'";
+    mysqli_query($conn, $sql_list_product_delete);
+}
